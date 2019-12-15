@@ -8,9 +8,30 @@
     <link href="style.css" rel = "stylesheet">
 </head>
 <body>
+    <div class = "audio">
+        <audio loop controls preload src="theme.mp3"></audio>
+    </div>
     <div class="score"></div>
     <div class="game">
-        <div class="start">Старт</div>
+        <div class="start">
+            <button class = "startButton">START</button>
+            <div class="form_radio_group">
+                <div class="form_radio_group-item">
+                    <input id="radio-1" type="radio" name="radio" value="1">
+                    <label for="radio-1">Easy</label>
+                </div>
+                <div class="form_radio_group-item">
+                    <input id="radio-2" type="radio" name="radio" value="2" checked>
+                    <label for="radio-2">Medium</label>
+                </div>
+                <div class="form_radio_group-item">
+                    <input id="radio-3" type="radio" name="radio" value="3">
+                    <label for="radio-3">Hard</label>
+                </div>
+            </div>
+            <input id="gameSpeed" type="range" max = "10" min = "0" step = "1" value="5">
+            <label for="gameSpeed">Configure speed of game</label>
+        </div>
         <div class="gameArea"></div>
     </div>
 <script src = "script.js"></script>

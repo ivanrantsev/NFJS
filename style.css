@@ -43,26 +43,133 @@ table {
 }
 
 
-.game {
-    height: 100vh;
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    margin: 5.85px 0;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 11.3px;
+    cursor: pointer;
+    box-shadow: 0.9px 0.9px 1.7px #002200, 0px 0px 0.9px #003c00;
+    background: #205928;
+    border-radius: 1px;
+    border: 1.1px solid #18d501;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 2.6px 2.6px 3.7px #00aa00, 0px 0px 2.6px #00c300;
+    border: 2.5px solid #83e584;
+    height: 23px;
+    width: 23px;
+    border-radius: 12px;
+    background: rgba(67, 150, 67, 0.99);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -6.95px;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #276c30;
+  }
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 11.3px;
+    cursor: pointer;
+    box-shadow: 0.9px 0.9px 1.7px #002200, 0px 0px 0.9px #003c00;
+    background: #205928;
+    border-radius: 1px;
+    border: 1.1px solid #18d501;
+  }
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 2.6px 2.6px 3.7px #00aa00, 0px 0px 2.6px #00c300;
+    border: 2.5px solid #83e584;
+    height: 23px;
+    width: 23px;
+    border-radius: 12px;
+    background: rgba(67, 150, 67, 0.99);
+    cursor: pointer;
+  }
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 11.3px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #194620;
+    border: 1.1px solid #18d501;
+    border-radius: 2px;
+    box-shadow: 0.9px 0.9px 1.7px #002200, 0px 0px 0.9px #003c00;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #205928;
+    border: 1.1px solid #18d501;
+    border-radius: 2px;
+    box-shadow: 0.9px 0.9px 1.7px #002200, 0px 0px 0.9px #003c00;
+  }
+  input[type=range]::-ms-thumb {
+    box-shadow: 2.6px 2.6px 3.7px #00aa00, 0px 0px 2.6px #00c300;
+    border: 2.5px solid #83e584;
+    height: 23px;
+    width: 23px;
+    border-radius: 12px;
+    background: rgba(67, 150, 67, 0.99);
+    cursor: pointer;
+    height: 11.3px;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #205928;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #276c30;
+  }
+
+
+#gameSpeed {
+    width: 50%;
+    margin: 10px auto;
 }
 
-.hide {
-    display: none;
+  label {
+      text-align: center;
 }
+  
+
+
+
+body {
+    overflow: hidden;
+}
+
+.game {
+    height: 100vh;
+    background-color: saddlebrown;
+}
+
+.audio {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 7;
+    opacity: 0.2;
+}
+
 
 .car, .enemy {
     width: 50px;
     height: 100px;
     background: transparent url('img/player.png') center / cover no-repeat;
     position: absolute;
-    left: 125px;
-    bottom: 10px;
 }
 
 .gameArea {
     width: 300px;
-    height: 100%;
+    height: 100%; 
     position: relative;
     margin: auto;
     background-color: #222;
@@ -75,4 +182,98 @@ table {
     height: 50px;
     background-color: white;
     left: 145px;
+}
+
+.tree, .tree2 {
+    width: 100px;
+    height: 100px;
+    background: transparent center / cover no-repeat;
+    position: absolute;
+}
+
+.form_radio_group {
+	display: block;
+    overflow: hidden;
+    color: white;
+    margin: 10px auto;
+    
+}
+.form_radio_group-item {
+	display: inline-block;
+	float: left;    
+}
+.form_radio_group input[type=radio] {
+	display: none;
+}
+.form_radio_group label {
+	display: inline-block;
+	cursor: pointer;
+	padding: 0px 15px;
+	line-height: 34px;
+	border: 1px solid #999;
+	border-right: none;
+	user-select: none;
+}
+ 
+.form_radio_group .form_radio_group-item:first-child label {
+	border-radius: 6px 0 0 6px;
+}
+.form_radio_group .form_radio_group-item:last-child label {
+	border-radius: 0 6px 6px 0;
+	border-right: 1px solid #999;
+}
+ 
+/* Checked */
+.form_radio_group input[type=radio]:checked + label {
+    background: #ffe0a6;
+    color: black;
+}
+ 
+/* Hover */
+.form_radio_group label:hover {
+	color: #666;
+}
+
+.startButton {
+    width: 33%;
+    height: 50px;
+    border-radius: 30px;
+    background-color: white;
+    border: 1px solid white;
+    color: black;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 0 auto;
+}
+
+.start, .score {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 1rem 0;
+    z-index: 5;
+    color: white;
+    font-size: 1.5rem;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.score {
+    height: auto;
+    display: block;
+    padding: 1rem 0;
+    color: skyblue;
+    font-weight: 500;
+    text-align: center;
+}
+
+.hide {
+    display: none;
 }
