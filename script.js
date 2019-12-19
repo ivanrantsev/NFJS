@@ -22,7 +22,7 @@ const keys = {
     ArrowLeft: false,
 };
 
-const setting = {
+let setting = {
     start: false,
     score: 0,
     bestScore: 0,
@@ -59,7 +59,6 @@ function getQuantityElements(heightElement) {
 function startGame() {
     audio.play();
     audio.volume = 0.5;
-    console.dir(audio);
     start.classList.add('hide');
     gameArea.innerHTML = '';
     score.style.top = '0px';
@@ -200,6 +199,7 @@ function moveEnemy() {
             carRect.right > enemyRect.left &&
             carRect.left < enemyRect.right &&
             carRect.bottom > enemyRect.top) {
+                crashSound();
                 setting.start = false;
                 start.classList.remove('hide');
                 start.style.height = 'auto';
@@ -216,4 +216,10 @@ function moveEnemy() {
             enemy.style.backgroundImage = enemyCar[Math.floor(Math.random() * 6)];
         }
     });
+}
+
+function crashSound() {
+    let crash = new Audio();
+    crash.src = 'crash.mp3';
+    crash.play();
 }

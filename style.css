@@ -42,7 +42,7 @@ table {
 	border-spacing: 0;
 }
 
-
+/*range*/
 input[type=range] {
     -webkit-appearance: none;
     width: 100%;
@@ -128,7 +128,7 @@ input[type=range] {
   input[type=range]:focus::-ms-fill-upper {
     background: #276c30;
   }
-
+/*range end*/
 
 #gameSpeed {
     width: 50%;
@@ -190,7 +190,7 @@ body {
     background: transparent center / cover no-repeat;
     position: absolute;
 }
-
+/*radio*/
 .form_radio_group {
 	display: block;
     overflow: hidden;
@@ -233,7 +233,7 @@ body {
 .form_radio_group label:hover {
 	color: #666;
 }
-
+/*radio end*/
 .startButton {
     width: 33%;
     height: 50px;
