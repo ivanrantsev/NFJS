@@ -129,10 +129,10 @@ function playGame() {
         moveRoad();
         moveEnemy();
         if (keys.ArrowLeft && setting.x > 0) {
-            setting.x -= setting.speed;
+            setting.x -= 3;
         }
         if (keys.ArrowRight && setting.x < gameArea.offsetWidth - car.offsetWidth) {
-            setting.x += setting.speed ;
+            setting.x += 3;
         }
         if (keys.ArrowDown && setting.y < gameArea.offsetHeight - car.offsetHeight) {
             setting.y += setting.speed;
